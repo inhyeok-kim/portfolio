@@ -1,8 +1,15 @@
-import { Card, CardContent, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Card, CardContent, Grid, Tooltip, Typography, useMediaQuery } from "@mui/material";
 import { blue, blueGrey, grey } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
+import PageHeader from "../components/com/PageHeader";
+import StackList from "../components/com/StackList";
+import StackTooltip from "../components/com/StackTooltip";
+import Component from "../components/home/Component";
+import Project from "../components/home/Project";
 
 export default function Home(){
     // const isMobile = useMediaQuery('(min-width:800px)');
+    const navigate = useNavigate();
 
     return (
         <Grid container justifyContent={"center"}>
@@ -10,16 +17,7 @@ export default function Home(){
 
                 {/* 헤더영역 */}
                 <Grid item xs={12} bgcolor={blue[500]}>
-                    <Grid container zIndex={3} sx={{position:'fixed',top:'30px'}} justifyContent="center">
-                        <Grid item xs={10} sx={{backdropFilter:'blur(10px)'}} bgcolor="rgba(255, 255, 255, 0.8)" borderRadius={"15px"} height={'50px'}>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} sx={{height : '600px'}}>
-                        <Grid container sx={{height:'calc(100% - 50px)'}} justifyContent={'center'} alignItems="center" flexDirection={'column'}>
-                            <Typography fontFamily={"serif"} color={'white'} variant="h3" fontWeight={'bold'}>IN HYEOK _ kim</Typography>
-                            <Typography color={'white'} variant="h4">The Client Side Developer</Typography>
-                        </Grid>
-                    </Grid>
+                    <PageHeader />
                 </Grid>
 
                 {/* 바디영역 */}
@@ -33,18 +31,21 @@ export default function Home(){
                                     alignItems="center" flexDirection="column">
                                         <Typography color={blueGrey[700]}
                                             fontWeight="bold"
-                                            fontFamily={'Silom'}
+                                            fontFamily={'sans-serif'}
                                             variant="h4">
-                                            The Client Side Developer
+                                            Stack of Skills
                                         </Typography>
-                                        <Typography>디자인 센스는 부족하지만, 여러가지 기술을 활용하여 다양한 기능과 서비스를 만들고 싶은 개발자</Typography>
+                                        <Grid item xs={10} marginTop={'50px'}>
+                                            <StackList />
+                                        </Grid>
+                                        {/* <Typography>여러가지 기술을 활용하여 다양한 기능과 서비스를 만들고 싶은 개발자</Typography> */}
                                     </Grid>
 
                                     <Grid margin="100px 0px" container justifyContent={"center"} 
                                     alignItems="center" flexDirection="column">
                                         <Typography color={blueGrey[700]}
                                             fontWeight="bold"
-                                            fontFamily={'Silom'}
+                                            fontFamily={'sans-serif'}
                                             variant="h4">
                                             Collection Of Components
                                         </Typography>
@@ -57,7 +58,7 @@ export default function Home(){
                                                     sx={{top:'0'}}
                                                     color={blueGrey[700]}
                                                     fontWeight="bold"
-                                                    fontFamily={'Silom'}
+                                                    fontFamily={'sans-serif'}
                                                     fontSize={'2rem'}
                                                     variant="h4">
                                                         UI Components
@@ -66,22 +67,13 @@ export default function Home(){
                                             <Grid item xs={9}>
                                                 <Grid container columnSpacing={4}>
                                                     <Grid item xs={4}>
-                                                        <Grid item xs={12} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '200px'}}>
-                                                        
-                                                        </Grid>
-                                                        <Typography marginTop={"10px"}>설명</Typography>
+                                                        <Component />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Grid item xs={12} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '200px'}}>
-                                                        
-                                                        </Grid>
-                                                        <Typography marginTop={"10px"}>설명</Typography>
+                                                        <Component />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Grid item xs={12} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '200px'}}>
-                                                        
-                                                        </Grid>
-                                                        <Typography marginTop={"10px"}>설명</Typography>
+                                                        <Component />
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
@@ -93,14 +85,24 @@ export default function Home(){
                                                     sx={{top:'0'}}
                                                     color={blueGrey[700]}
                                                     fontWeight="bold"
-                                                    fontFamily={'Silom'}
+                                                    fontFamily={'sans-serif'}
                                                     fontSize={'2rem'}
                                                     variant="h4">
                                                         Function Components
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={9}>
-                                                리스트리스트
+                                                <Grid container columnSpacing={4}>
+                                                    <Grid item xs={4}>
+                                                        <Component />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component />
+                                                    </Grid>
+                                                </Grid>
                                             </Grid>
                                         </Grid>
                                         
@@ -110,7 +112,7 @@ export default function Home(){
                                     alignItems="center" flexDirection="column">
                                         <Typography variant="h4" color={blueGrey[700]}
                                             fontWeight="bold"
-                                            fontFamily={'Silom'}>
+                                            fontFamily={'sans-serif'}>
                                             Collection Of Projects
                                         </Typography>
                                         <Typography>다양한 기술로 만들어진 프로젝트</Typography>
@@ -120,44 +122,16 @@ export default function Home(){
                                             <Grid item xs={12}>
                                                 <Grid container columnSpacing={4} rowSpacing={4}>
                                                     <Grid item xs={6}>
-                                                        <Grid container>
-                                                            <Grid item xs={3}>
-                                                                <Typography marginTop={"10px"}>IOT</Typography>
-                                                            </Grid>
-                                                            <Grid item xs={9} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '300px'}}>
-                                                            
-                                                            </Grid>
-                                                        </Grid>
+                                                        <Project direction="left" title="IOT" />
                                                     </Grid>
                                                     <Grid item xs={6}>
-                                                        <Grid container>
-                                                            <Grid item xs={9} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '300px'}}>
-                                                            
-                                                            </Grid>
-                                                            <Grid item xs={3}>
-                                                                <Typography textAlign={"right"} marginTop={"10px"}>동시편집</Typography>
-                                                            </Grid>
-                                                        </Grid>
+                                                        <Project direction="right" title="동시편집" />
                                                     </Grid>
                                                     <Grid item xs={6}>
-                                                        <Grid container>
-                                                            <Grid item xs={3}>
-                                                                <Typography marginTop={"10px"}>PMA</Typography>
-                                                            </Grid>
-                                                            <Grid item xs={9} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '300px'}}>
-                                                            
-                                                            </Grid>
-                                                        </Grid>
+                                                        <Project direction="left" title="PMA" />
                                                     </Grid>
                                                     <Grid item xs={6}>
-                                                        <Grid container>
-                                                            <Grid item xs={9} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} sx={{height : '300px'}}>
-                                                            
-                                                            </Grid>
-                                                            <Grid item xs={3}>
-                                                                <Typography textAlign={"right"} marginTop={"10px"}>가계부</Typography>
-                                                            </Grid>
-                                                        </Grid>
+                                                        <Project direction="right" title="가계부" />
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
