@@ -68,13 +68,16 @@ export default function Home(){
                                             <Grid item xs={9}>
                                                 <Grid container columnSpacing={4}>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Switch" />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Page Stack" />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Carousel" />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component title="Draggable" />
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
@@ -95,13 +98,13 @@ export default function Home(){
                                             <Grid item xs={9}>
                                                 <Grid container columnSpacing={4}>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Calculator" />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Virtual keyboard" />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Component />
+                                                        <Component title="Lotto" />
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
@@ -147,6 +150,18 @@ export default function Home(){
                                                 </Grid>
                                             </Grid>
 
+                                        </Grid>
+                                    </Grid>
+
+                                    <Grid margin="200px 0px" container justifyContent={"center"} 
+                                    alignItems="center" flexDirection="column">
+                                        <Typography color={blueGrey[700]}
+                                            fontWeight="bold"
+                                            fontFamily={'sans-serif'}
+                                            variant="h3">
+                                            Career
+                                        </Typography>
+                                        <Grid item xs={10} marginTop={'50px'}>
                                         </Grid>
                                     </Grid>
 
