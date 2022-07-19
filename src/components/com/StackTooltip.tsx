@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 interface propType{
     src : string,
     el : Element | null,
-    onClick : Function
+    onClick : Function,
+    title : string
 }
 export default function StackTooltip({
-    src, el, onClick
+    src, el, onClick, title
 }:propType){
     const [open,setOpen] = useState(false);
     const refImg = useRef(null);
@@ -35,7 +36,7 @@ export default function StackTooltip({
             disableFocusListener
             disableHoverListener
             disableTouchListener
-            title="Add"
+            title={title}
         >
             <img ref={refImg} onClick={handleOpen} style={{width:'100%',height:'100%',objectFit: 'contain',cursor:'pointer'}} src={src} />
         </Tooltip>

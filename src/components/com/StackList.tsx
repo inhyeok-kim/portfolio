@@ -11,28 +11,28 @@ export default function StackList(){
     return (
         <Grid container justifyContent={"space-between"}>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/java.png' />
+                <StackTooltip title="Java" el={el} onClick={openHandler} src='/assets/images/java.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/spring.png' />
+                <StackTooltip title="Spring framework" el={el} onClick={openHandler} src='/assets/images/spring.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/react.png' />
+                <StackTooltip title="React" el={el} onClick={openHandler} src='/assets/images/react.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/vue.png' />
+                <StackTooltip title="Vue" el={el} onClick={openHandler} src='/assets/images/vue.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/node.png' />
+                <StackTooltip title="Node.js" el={el} onClick={openHandler} src='/assets/images/node.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/electron.png' />
+                <StackTooltip title="Electron" el={el} onClick={openHandler} src='/assets/images/electron.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/ts.png' />
+                <StackTooltip title="Typescript" el={el} onClick={openHandler} src='/assets/images/ts.png' />
             </Grid>
             <Grid item xs={1}>
-                <StackTooltip el={el} onClick={openHandler} src='/assets/images/mui.png' />
+                <StackTooltip title="Material Ui" el={el} onClick={openHandler} src='/assets/images/mui.png' />
             </Grid>
         </Grid>
     )

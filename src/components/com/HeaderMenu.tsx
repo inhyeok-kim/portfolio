@@ -46,16 +46,16 @@ export default function HeaderMenu(){
                             }}
                             title={
                                 <List>
-                                    <ListItemButton color={blueGrey[700]}>
+                                    <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/iot`);}}>
                                         <ListItemText primary="IOT Project" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
                                     </ListItemButton>
-                                    <ListItemButton color={blueGrey[700]}>
+                                    <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/pma`);}}>
                                         <ListItemText primary="Project Manager App" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
                                     </ListItemButton>
-                                    <ListItemButton color={blueGrey[700]}>
+                                    <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/editor`);}}>
                                         <ListItemText primary="co-Text Editor" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
                                     </ListItemButton>
-                                    <ListItemButton color={blueGrey[700]}>
+                                    <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/acobook`);}}>
                                         <ListItemText primary="Account Book App" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
                                     </ListItemButton>
                                 </List>
@@ -161,7 +161,7 @@ export default function HeaderMenu(){
                     <Grid>
                         <Grid sx={{cursor:'pointer'}} container alignItems={"center"} color={blueGrey[600]}>
                             <GitHubIcon fontSize="small" />
-                            <Typography fontSize={'0.9rem'} margin={'0px 5px'} color={blueGrey[600]}>Github</Typography>
+                            <Typography onClick={()=>{window.open('https://github.com/inhyeok-kim')}} fontSize={'0.9rem'} margin={'0px 5px'} color={blueGrey[600]}>Github</Typography>
                         </Grid>
                     </Grid>
                 </Grid>
