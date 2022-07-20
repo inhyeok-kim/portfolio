@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 
 interface propType{
     src : string,
-    el : Element | null,
-    onClick : Function,
+    el? : Element | null,
+    onClick? : Function,
     title : string
 }
 export default function StackTooltip({
