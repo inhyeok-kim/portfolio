@@ -3,7 +3,6 @@ import { blue, blueGrey, grey } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import PageHeader from "../components/com/PageHeader";
 import StackList from "../components/com/StackList";
-import StackTooltip from "../components/com/StackTooltip";
 import Component from "../components/home/Component";
 import Project from "../components/home/Project";
 
@@ -68,13 +67,13 @@ export default function Home(){
                                             <Grid item xs={9}>
                                                 <Grid container columnSpacing={4}>
                                                     <Grid item xs={4}>
-                                                        <Component title="Switch" />
-                                                    </Grid>
-                                                    <Grid item xs={4}>
-                                                        <Component title="Page Stack" />
+                                                        <Component imgSrc="/assets/images/component/switch.png" link="switch" title="Switch" />
                                                     </Grid>
                                                     <Grid item xs={4}>
                                                         <Component title="Carousel" />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component title="DatePicker" />
                                                     </Grid>
                                                     <Grid item xs={4}>
                                                         <Component title="Draggable" />
@@ -102,6 +101,12 @@ export default function Home(){
                                                     </Grid>
                                                     <Grid item xs={4}>
                                                         <Component title="Virtual keyboard" />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component title="Paint" />
+                                                    </Grid>
+                                                    <Grid item xs={4}>
+                                                        <Component title="Page Stack" />
                                                     </Grid>
                                                     <Grid item xs={4}>
                                                         <Component title="Lotto" />
@@ -153,7 +158,7 @@ export default function Home(){
                                         </Grid>
                                     </Grid>
 
-                                    <Grid margin="200px 0px" container justifyContent={"center"} 
+                                    {/* <Grid margin="200px 0px" container justifyContent={"center"} 
                                     alignItems="center" flexDirection="column">
                                         <Typography color={blueGrey[700]}
                                             fontWeight="bold"
@@ -163,7 +168,7 @@ export default function Home(){
                                         </Typography>
                                         <Grid item xs={10} marginTop={'50px'}>
                                         </Grid>
-                                    </Grid>
+                                    </Grid> */}
 
                                 </Grid>
                             </Grid>

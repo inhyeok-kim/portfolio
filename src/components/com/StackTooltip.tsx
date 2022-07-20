@@ -24,7 +24,11 @@ export default function StackTooltip({
     },[el]);
 
     function handleOpen(e:any){
-        onClick(e.target);
+        // onClick(e.target);
+        setOpen(true);
+    }
+    function handleClose(e:any){
+        setOpen(false);
     }
 
     return (
@@ -34,11 +38,11 @@ export default function StackTooltip({
             }}
             open={open}
             disableFocusListener
-            disableHoverListener
+            // disableHoverListener
             disableTouchListener
             title={title}
         >
-            <img ref={refImg} onClick={handleOpen} style={{width:'100%',height:'100%',objectFit: 'contain',cursor:'pointer'}} src={src} />
+            <img ref={refImg} onMouseLeave={handleClose} onMouseEnter={handleOpen} style={{width:'100%',height:'100%',objectFit: 'contain',cursor:'pointer'}} src={src} />
         </Tooltip>
     )
 }

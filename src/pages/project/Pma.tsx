@@ -11,8 +11,10 @@ export default function Pma(){
            <Grid item xs={12}>
 
                 {/* 헤더영역 */}
-                <Grid item xs={12} bgcolor={blue[500]}>
-                    <PageHeader />
+                <Grid item xs={12} sx={{
+                        background: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/assets/images/project/pma/pma01.png)'
+                    }}>
+                    <PageHeader title={'Project Management Application'}  />
                 </Grid>
 
                 {/* 바디영역 */}

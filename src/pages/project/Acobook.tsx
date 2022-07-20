@@ -11,8 +11,10 @@ export default function Acobook(){
            <Grid item xs={12}>
 
                 {/* 헤더영역 */}
-                <Grid item xs={12} bgcolor={blue[500]}>
-                    <PageHeader />
+                <Grid item xs={12} sx={{
+                        background: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/assets/images/project/acobook/acobook01.png)'
+                    }}>
+                    <PageHeader  title={'Acoount Book Project'} />
                 </Grid>
 
                 {/* 바디영역 */}

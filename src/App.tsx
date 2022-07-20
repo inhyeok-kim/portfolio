@@ -7,6 +7,7 @@ import Pma from './pages/project/Pma';
 import Editor from './pages/project/Editor';
 import Iot from './pages/project/Iot';
 import Acobook from './pages/project/Acobook';
+import Switch from './pages/comp/Switch';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/components/sample" element={<CompSample />} />
+                <Route path="/components/switch" element={<Switch />} />
                 <Route path="/projects/iot" element={<Iot />} />
                 <Route path="/projects/editor" element={<Editor />} />
                 <Route path="/projects/pma" element={<Pma />} />

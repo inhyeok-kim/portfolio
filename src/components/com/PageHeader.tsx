@@ -2,7 +2,12 @@ import { Button, Grid, Typography } from "@mui/material"
 import { blueGrey } from "@mui/material/colors"
 import HeaderMenu from "./HeaderMenu"
 
-export default function PageHeader(){
+interface propType {
+    title? : string
+}
+export default function PageHeader({
+    title
+}:propType){
     
     return (
         <>
@@ -13,8 +18,8 @@ export default function PageHeader(){
             </Grid>
             <Grid item xs={12} sx={{height : '600px'}}>
                 <Grid container sx={{height:'calc(100% - 50px)'}} justifyContent={'center'} alignItems="center" flexDirection={'column'}>
-                    {/* <Typography fontFamily={"serif"} color={'white'} variant="h3" fontWeight={'bold'}>IN HYEOK _ kim</Typography>
-                    <Typography color={'white'} variant="h4">The Client Side Developer</Typography> */}
+                    <Typography color={'white'} variant="h3" fontWeight={'bold'}>{title}</Typography>
+                    {/* <Typography color={'white'} variant="h4">{title}</Typography> */}
                 </Grid>
             </Grid>
         </>

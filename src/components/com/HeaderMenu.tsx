@@ -99,7 +99,7 @@ export default function HeaderMenu(){
                                             }}
                                             title={
                                                 <List>
-                                                    <ListItemButton sx={{height: '2rem'}}>
+                                                    <ListItemButton onClick={()=>{navigate('/components/switch')}} sx={{height: '2rem'}}>
                                                         <ListItemText primary="Switch" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700]}} />
                                                     </ListItemButton>
                                                     <ListItemButton  sx={{height: '2rem'}}>

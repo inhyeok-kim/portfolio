@@ -4,14 +4,15 @@ import { useNavigate } from "react-router-dom"
 interface propType {
     title : string
     imgSrc? : string
+    link? : string
 }
 export default function Component({
-    title, imgSrc
+    title, imgSrc, link='sample'
 }:propType){
     const navigate = useNavigate();
 
     return (
-        <Grid item xs={12} sx={{cursor:'pointer'}} onClick={()=>{navigate('/components/sample')}}>
+        <Grid item xs={12} sx={{cursor:'pointer'}} onClick={()=>{navigate(`/components/${link}`)}}>
             <Grid  item xs={12} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} 
                 sx={{
                     height : '200px','&:hover':{transform:"scale(1.05)"}, transition:'transform 0.5s',
