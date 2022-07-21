@@ -25,7 +25,7 @@ export default function Editor(){
                                 <Grid item xs={10} >
                                     <Grid container margin="200px 0px" >
                                         <Grid item xs={6}>
-                                            <img src="/assets/images/project/editor/editor02.gif" style={{borderRadius:'20px', boxShadow:'0px 1px 5px 0px lightgrey'}} />
+                                            <img src="/assets/images/project/editor/editor02.gif" style={{width:'100%',borderRadius:'20px', boxShadow:'0px 1px 5px 0px lightgrey'}} />
                                         </Grid>
                                         <Grid item xs={6}>
                                             <Grid container justifyContent={'center'}>
@@ -60,7 +60,7 @@ export default function Editor(){
                                     </Grid>
 
                                     <Grid container margin="300px 0px">
-                                        <Grid item xs={4}>
+                                        <Grid item xs={5}>
                                             <Grid container height={'100%'} justifyContent={'center'} alignItems="center">
                                                 <Grid item xs={10}padding="30px 0px" borderBottom={'1px solid '+blueGrey[100]} borderTop={'1px solid '+blueGrey[100]}>
                                                     <Typography fontSize={'1.1rem'} color={blueGrey[700]}>
@@ -71,7 +71,7 @@ export default function Editor(){
                                                 </Grid>
                                             </Grid>
                                         </Grid>
-                                        <Grid item xs={8}>
+                                        <Grid item xs={7}>
                                             <img src="/assets/images/project/editor/editor03.gif" style={{width:'100%',borderRadius:'20px', boxShadow:'0px 1px 5px 0px lightgrey'}} />
                                         </Grid>
                                     </Grid>

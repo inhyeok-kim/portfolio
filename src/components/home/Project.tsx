@@ -9,13 +9,15 @@ interface propType {
     link? : string
     imgSrc? : string
     content? : string | ReactElement
+    disable? : boolean
 }
 export default function Project({
     direction='right',
     title,
     link,
     imgSrc,
-    content
+    content,
+    disable=false
 }:propType){
     const navigate = useNavigate();
 
@@ -55,12 +57,18 @@ export default function Project({
             <Grid item xs={11} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} 
                 sx={{
                     height : '250px','&:hover':{transform:"scale(1.05)"}, transition:'transform 0.5s',
-                    backgroundImage:`url(${imgSrc})`,
+                    background: disable ? `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(${imgSrc})` : `url(${imgSrc})`,
                     backgroundSize: 'cover',
                 }}
                 
             >
-                
+                {disable ? 
+                    <Grid container height={'100%'} alignItems='center' justifyContent={'center'}>
+                        <Typography variant="h4" color="white" textAlign={'center'}>Comming Soon</Typography>
+                    </Grid>
+                    :
+                    ''
+                }
             </Grid>
             {
                 direction==='right' ?

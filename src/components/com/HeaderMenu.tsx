@@ -45,9 +45,9 @@ export default function HeaderMenu(){
                             }}
                             title={
                                 <List>
-                                    <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/iot`);}}>
+                                    {/* <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/iot`);}}>
                                         <ListItemText primary="IOT Project" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
-                                    </ListItemButton>
+                                    </ListItemButton> */}
                                     <ListItemButton color={blueGrey[700]} onClick={()=>{navigate(`/projects/pma`);}}>
                                         <ListItemText primary="Project Manager App" primaryTypographyProps={{fontWeight:'bold', fontSize:'0.8rem',color:blueGrey[700] }} />
                                     </ListItemButton>

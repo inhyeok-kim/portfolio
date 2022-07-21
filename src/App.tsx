@@ -8,6 +8,7 @@ import Editor from './pages/project/Editor';
 import Iot from './pages/project/Iot';
 import Acobook from './pages/project/Acobook';
 import Switch from './pages/comp/Switch';
+import Paint from './pages/comp/Paint';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/components/sample" element={<CompSample />} />
                 <Route path="/components/switch" element={<Switch />} />
+                <Route path="/components/paint" element={<Paint />} />
                 <Route path="/projects/iot" element={<Iot />} />
                 <Route path="/projects/editor" element={<Editor />} />
                 <Route path="/projects/pma" element={<Pma />} />
