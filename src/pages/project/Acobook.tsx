@@ -37,6 +37,9 @@ export default function Acobook(){
                                                     <Grid item xs={5} marginTop="20px">
                                                         <Grid container columnSpacing={3}>
                                                             <Grid item xs={2}>
+                                                                <StackTooltip title="Typescript" src='/assets/images/ts.png' />
+                                                            </Grid>
+                                                            <Grid item xs={2}>
                                                                 <StackTooltip title="React" src='/assets/images/react.png' />
                                                             </Grid>
                                                             <Grid item xs={2}>
