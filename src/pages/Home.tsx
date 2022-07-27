@@ -70,7 +70,7 @@ export default function Home(){
                                                         <Component imgSrc="/assets/images/component/switch.png" link="switch" title="Switch" />
                                                     </Grid>
                                                     <Grid item xs={4}>
-                                                        <Component title="Carousel" />
+                                                        <Component imgSrc="/assets/images/component/carousel.png" link="carousel" title="Carousel" />
                                                     </Grid>
                                                     <Grid item xs={4}>
                                                         <Component title="DatePicker" />
@@ -130,7 +130,7 @@ export default function Home(){
                                         
                                         <Grid container marginTop={'50px'} justifyContent="center">
                                             
-                                            <Grid item xs={10}>
+                                            <Grid item xs={11}>
                                                 <Grid container columnSpacing={4} rowSpacing={4}>
                                                     {/* <Grid item xs={6}>
                                                         <Project 

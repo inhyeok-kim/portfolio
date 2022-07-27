@@ -30,7 +30,7 @@ export default function Project({
             }} sx={{cursor:'pointer'}}>
             {
                 direction==='left' ?
-                <Grid item xs={1} paddingRight="20px">
+                <Grid item xs={2} paddingRight="20px">
                     <Typography variant="h4" 
                         color={blueGrey[700]}
                         fontWeight="bold"
@@ -54,7 +54,7 @@ export default function Project({
                 :
                 ''
             }
-            <Grid item xs={11} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} 
+            <Grid item xs={10} boxShadow={'0px 5px 10px -5px grey'} borderRadius={'15px'} 
                 sx={{
                     height : '250px','&:hover':{transform:"scale(1.05)"}, transition:'transform 0.5s',
                     background: disable ? `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(${imgSrc})` : `url(${imgSrc})`,

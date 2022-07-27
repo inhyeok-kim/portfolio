@@ -101,8 +101,8 @@ export default function HeaderMenu(){
                                                     <ListItemButton onClick={()=>{navigate('/components/switch')}} sx={{height: '2rem'}}>
                                                         <ListItemText primary="Switch" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700]}} />
                                                     </ListItemButton>
-                                                    <ListItemButton  sx={{height: '2rem'}}>
-                                                        <ListItemText primary="Page Stack" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700] }} />
+                                                    <ListItemButton onClick={()=>{navigate('/components/carousel')}} sx={{height: '2rem'}}>
+                                                        <ListItemText primary="Carousel" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700]}} />
                                                     </ListItemButton>
                                                 </List>
                                             }>
@@ -128,6 +128,12 @@ export default function HeaderMenu(){
                                                 <List>
                                                     <ListItemButton sx={{height: '2rem'}}>
                                                         <ListItemText primary="Calculator" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700] }} />
+                                                    </ListItemButton>
+                                                    <ListItemButton onClick={()=>{navigate('/components/paint')}} sx={{height: '2rem'}}>
+                                                        <ListItemText primary="Paint" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700] }} />
+                                                    </ListItemButton>
+                                                    <ListItemButton  sx={{height: '2rem'}}>
+                                                        <ListItemText primary="Page Stack" primaryTypographyProps={{fontSize:'0.8rem',color:blueGrey[700] }} />
                                                     </ListItemButton>
                                                 </List>
                                             }>
